@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,66 @@
     <!-- tailwind & daisy ui script here -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#B68C5A',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- EB garamond & poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/478c67526d.js" crossorigin="anonymous"></script>
+    
+    <style>
+        .font-garamond{
+            font-family: 'EB Garamond', serif;
+        }
+        .font-poppins{
+            font-family: 'Poppins', sans-serif;        }
+    </style>
 </head>
-<body>
+<body class="font-poppins">
     <!-- header section -->
-    <header>
-        
+    <header class="max-w-screen-xl mx-auto">
+        <!-- nav section -->
+        <nav class="my-10 flex justify-between items-center">
+            <div class="flex items-center">
+                <img class="w-11" src="./images/business.png" alt="">
+                <p class="font-garamond font-extrabold text-4xl px-4">Justice</p>
+            </div>
+            <div class="list-none flex gap-8">
+                <li><a href="">Home</a></li>
+                <li><a href="">Services<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="">Cases<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="">Blog<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="">Contact Us<i class="fa-solid fa-angle-right"></i></a></li>
+            </div>
+            <button class="btn bg-primary-color text-white font-semibold">Free Consultation</button>
+        </nav>
+        <!-- hero section -->
+        <section class="">
+            <div class="hero min-h-[calc(100vh-128px)]" style="background-image: url('./images/banner.png');">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-2xl text-white">
+                    <h1 class="mb-5 text-7xl font-extrabold font-garamond">We Provide Effective Legal Solutions</h1>
+                    <p class="mb-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <div class="flex items-center gap-5">
+                        <input type="search" name="" id="" placeholder="Search Your Services" class="rounded-lg w-[500px] px-5 py-4">
+                    <button class=" btn border-none text-white bg-primary-color font-semibold text-xl h-14">search</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
     </header>
     <!-- main section -->
     <main>
